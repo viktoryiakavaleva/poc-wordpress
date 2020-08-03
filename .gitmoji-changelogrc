@@ -1,0 +1,7 @@
+{
+  "project": {
+    "name": "poc-wordpress",
+    "description": "POC WordPress plugin with Unit Tests: Application description",
+    "version": "0.0.1"
+  }
+}
