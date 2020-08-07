@@ -3,6 +3,7 @@
 [![gitmoji-changelog](https://img.shields.io/badge/Changelog-gitmoji-blue.svg)](https://github.com/frinyvonnick/gitmoji-changelog)
 [![Managed with Taiga.io](https://img.shields.io/badge/Managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/monogrammbot-monogrammpoc-wordpress/ "Managed with Taiga.io")
 [![Build Status](https://travis-ci.org/Monogramm/poc-wordpress.svg)](https://travis-ci.org/Monogramm/poc-wordpress)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/34921e8a9c4e45f599438db801f57779)](https://www.codacy.com/gh/Monogramm/poc-wordpress?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Monogramm/poc-wordpress&amp;utm_campaign=Badge_Grade)
 [![GitHub stars](https://img.shields.io/github/stars/Monogramm/poc-wordpress?style=social)](https://github.com/Monogramm/poc-wordpress)
 
 <!--
