@@ -23,7 +23,7 @@
 
 # **POC WordPress**
 
-> **:elephant: :alembic: POC WordPress plugin with Unit Tests: Application description**
+> :elephant: :alembic: POC WordPress plugin with Unit Tests
 
 :construction: **This project is still in development!**
 
