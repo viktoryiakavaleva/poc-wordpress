@@ -3,6 +3,8 @@
   "description": "POC WordPress plugin with Unit Tests",
   "author": "Monogramm",
   "license": "AGPL",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
   "dependencies": {
     "gitmoji-changelog": "^2.1.0",
     "remark-cli": "^7.0.1",
@@ -10,9 +12,17 @@
     "remark-lint-list-item-indent": "^1.0.4",
     "remark-preset-lint-recommended": "^3.0.3"
   },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-wp-i18n": "~0.5.0",
+    "grunt-wp-readme-to-markdown": "~1.0.0"
+  },
   "scripts": {
     "lint-md": "remark .",
-    "gitmoji-changelog": "gitmoji-changelog --preset generic && remark CHANGELOG.md -o"
+    "gitmoji-changelog": "gitmoji-changelog --preset generic && remark CHANGELOG.md -o",
+    "start" : "grunt default" ,
+    "readme" : "grunt readme",
+    "i18n" : "grunt i18n"
   },
   "remarkConfig": {
     "plugins": [
