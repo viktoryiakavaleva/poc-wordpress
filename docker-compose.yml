@@ -15,7 +15,7 @@ services:
      - "8080:80"
     # To persist WP locally
     volumes:
-      - /home/monogramm/dev/gh/monogramm/poc-wordpress/:/var/www/html/wp-content/plugins/event-plugin
+      - .:/var/www/html/wp-content/plugins/event-plugin
     environment:
       # Site Config
       - WORDPRESS_USERNAME=${WORDPRESS_ADMIN_LOGIN}
