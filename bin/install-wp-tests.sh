@@ -62,7 +62,7 @@ install_wp() {
 	mkdir -p "$WP_CORE_DIR"
 
 	if [[ "$WP_VERSION" == 'nightly' || "$WP_VERSION" == 'trunk' ]]; then
-		mkdir -p $TMPDIR/wordpress-nightly
+		mkdir -p "$TMPDIR/wordpress-nightly"
 		download 'https://wordpress.org/nightly-builds/wordpress-latest.zip'  "$TMPDIR/wordpress-nightly/wordpress-nightly.zip"
 		unzip -q "$TMPDIR/wordpress-nightly/wordpress-nightly.zip" -d "$TMPDIR/wordpress-nightly/"
 		mv "$TMPDIR/wordpress-nightly/wordpress"/* "$WP_CORE_DIR"
@@ -112,9 +112,9 @@ install_test_suite() {
 	fi
 
 	if [ ! -f wp-tests-config.php ]; then
-		download https://develop.svn.wordpress.org/${WP_TESTS_TAG}/wp-tests-config-sample.php "$WP_TESTS_DIR"/wp-tests-config.php
+		download "https://develop.svn.wordpress.org/${WP_TESTS_TAG}/wp-tests-config-sample.php" "$WP_TESTS_DIR/wp-tests-config.php"
 		# remove all forward slashes in the end
-		WP_CORE_DIR=$(echo $WP_CORE_DIR | sed "s:/\+$::")
+		WP_CORE_DIR=$(echo "$WP_CORE_DIR" | sed "s:/\+$::")
 		sed "$ioption" "s:dirname( __FILE__ ) . '/src/':'$WP_CORE_DIR/':" "$WP_TESTS_DIR"/wp-tests-config.php
 		sed "$ioption" "s/youremptytestdbnamehere/$DB_NAME/" "$WP_TESTS_DIR"/wp-tests-config.php
 		sed "$ioption" "s/yourusernamehere/$DB_USER/" "$WP_TESTS_DIR"/wp-tests-config.php
@@ -137,11 +137,11 @@ install_db() {
 	local EXTRA=""
 
 	if ! [ -z "$DB_HOSTNAME" ] ; then
-		if [ $(echo $DB_SOCK_OR_PORT | grep -e '^[0-9]\{1,\}$') ]; then
+		if [ $(echo "$DB_SOCK_OR_PORT" | grep -e '^[0-9]\{1,\}$') ]; then
 			EXTRA=" --host=$DB_HOSTNAME --port=$DB_SOCK_OR_PORT --protocol=tcp"
-		elif ! [ -z $DB_SOCK_OR_PORT ] ; then
+		elif ! [ -z "$DB_SOCK_OR_PORT" ] ; then
 			EXTRA=" --socket=$DB_SOCK_OR_PORT"
-		elif ! [ -z $DB_HOSTNAME ] ; then
+		elif ! [ -z "$DB_HOSTNAME" ] ; then
 			EXTRA=" --host=$DB_HOSTNAME --protocol=tcp"
 		fi
 	fi
