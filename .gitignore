@@ -20,7 +20,18 @@ node_modules/
 # ignore composer dependency directories
 vendor/
 
-# ignore log files and databases
+# ignore log files, databases and archives
 *.log
 *.sql
 *.sqlite
+*.tar.gz
+*.zip
+
+# ignore miscellaneous files
+phpcs.xml
+phpunit.xml
+wp-cli.local.yml
+
+# ignore miscellaneous files
+.DS_Store
+Thumbs.db
