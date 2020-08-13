@@ -1,5 +1,5 @@
 {
-    "name": "poc-wordpress",
+    "name": "monogramm/poc-wordpress",
     "type": "project",
     "description": "POC WordPress plugin with Unit Tests",
     "homepage": "https://github.com/Monogramm/poc-wordpress/upload/develop",
