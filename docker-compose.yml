@@ -2,7 +2,8 @@ version: "2.2"
 
 services:
   wordpress:
-    build: ./
+    # https://hub.docker.com/repository/docker/monogramm/docker-wordpress
+    image: monogramm/docker-wordpress:5.3-apache
     container_name: wordpress
     #restart: always
     depends_on:
@@ -14,7 +15,7 @@ services:
      - "8080:80"
     # To persist WP locally
     volumes:
-     - /home/monogramm/dev/gh/monogramm/poc-wordpress/:/var/www/html/wp-content/plugins/event-plugin
+      - .:/var/www/html/wp-content/plugins/event-plugin
     environment:
       # Site Config
       - WORDPRESS_USERNAME=${WORDPRESS_ADMIN_LOGIN}
